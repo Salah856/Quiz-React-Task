@@ -38,7 +38,7 @@ function Home(){
       Create Quiz
     </button>
 
-    
+    {quizzes.length &&
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="quiz table">
         <TableHead>
@@ -82,6 +82,7 @@ function Home(){
         </TableBody>
       </Table>
     </TableContainer>
+  }
     </>
   )
 };
