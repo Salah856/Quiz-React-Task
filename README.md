@@ -31,3 +31,7 @@ Done :
 to do: 
 
 - edit quiz 
+
+
+I used the local storage to store the quizzes array data 
+
