@@ -32,7 +32,6 @@ const EditQuiz = () => {
 
 
         <Button
-        
             style={{
                 color: 'white', 
                 backgroundColor: 'blue'
@@ -42,6 +41,8 @@ const EditQuiz = () => {
             Edit Quiz
         </Button>
         </>
+
+        // to do the ui of the every question and its options
 
     )
 
