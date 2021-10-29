@@ -15,8 +15,8 @@ function Home(){
   let quizzes = []; 
   
   useEffect(() => { 
-    quizzes = getQuizzes(); 
-  }, []);
+    quizzes = getQuizzes();
+  }, [getQuizzes]);
 
   return (
     <>
@@ -35,7 +35,7 @@ function Home(){
       Create Quiz
     </button>
 
-   { quizzes.length > 0 && 
+   { quizzes.length && 
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="quiz table">
         <TableHead>
