@@ -30,7 +30,7 @@ Done :
 
 to do: 
 
-- edit quiz 
+- edit quiz view 
 - get quiz from local storage by id value; 
 - then handle properly the format of data required for quiz component from react-quizzes packages; 
 
