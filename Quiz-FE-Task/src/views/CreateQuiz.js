@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router';
 
 import { QuizzBuilder } from 'react-quizzes';
 import "react-quizzes/lib/assets/antd.css"; 
@@ -11,11 +12,13 @@ import { Button, TextField } from '@material-ui/core';
 
 const CreateQuiz = ({ className, ...rest }) => {
 
+  const history= useHistory();
+
   const [quizData, setQuizData] = useState(null); 
   
   const [title, setTitle] = useState(''); 
   const [description, setDescription] = useState(''); 
-  const [url, setURL] = useState(''); 
+  const [URL, setURL] = useState(''); 
 
   const handleTitleChange=(e)=>{
     setTitle(e.target.value); 
@@ -33,7 +36,9 @@ const CreateQuiz = ({ className, ...rest }) => {
       // console.log(quizData); 
 
       let quiz = createQuizJSON(quizData, URL, title, description); 
-      handleLocalStorage(quiz); 
+      handleLocalStorage(quiz);
+      
+      history.push('/'); // route to quizzes list view 
   };
 
 
