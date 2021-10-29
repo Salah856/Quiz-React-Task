@@ -5,6 +5,7 @@ import {
  Table, TableBody, 
  TableCell, TableContainer, 
  TableHead, Paper, TableRow,
+ Button
 } from '@material-ui/core'
 import getQuizzes from "../utils/getQuizzes";
 
@@ -42,6 +43,7 @@ function Home(){
             <TableCell>Title</TableCell>
             <TableCell align="right">URL</TableCell>
             <TableCell align="right">Description</TableCell>
+            <TableCell align="right" >Operations</TableCell>
            
           </TableRow>
         </TableHead>
@@ -53,8 +55,25 @@ function Home(){
             >
 
               <TableCell align="right">{quiz.URL}</TableCell>
-              <TableCell align="right">{row.title}</TableCell>
-              <TableCell align="right">{row.description}</TableCell>
+              <TableCell align="right">{quiz.title}</TableCell>
+              <TableCell align="right">{quiz.description}</TableCell>
+              <TableCell>  
+                <Button
+                
+                  onClick={
+                    ()=>{
+                      history.push(`/quiz-edit/${quiz.id}`)
+                    }
+                  }
+                  style={{
+                    color: 'white', 
+                    backgroundColor: 'green', 
+
+                  }}
+                >
+                  Edit Quiz
+                </Button>  
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
