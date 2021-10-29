@@ -44,8 +44,8 @@ function Home(){
         <TableHead>
           <TableRow>
             <TableCell>Title</TableCell>
-            <TableCell align="right">URL</TableCell>
             <TableCell align="right">Description</TableCell>
+            <TableCell align="right">URL</TableCell>
             <TableCell align="right" >Operations</TableCell>
            
           </TableRow>
@@ -57,10 +57,10 @@ function Home(){
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
 
-              <TableCell align="right">{quiz.URL}</TableCell>
               <TableCell align="right">{quiz.title}</TableCell>
               <TableCell align="right">{quiz.description}</TableCell>
-              <TableCell>  
+              <TableCell align="right">{quiz.URL}</TableCell>
+              <TableCell align="right">  
                 <Button
                 
                   onClick={
