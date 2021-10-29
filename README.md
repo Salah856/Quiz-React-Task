@@ -17,9 +17,12 @@ Libraries used: material ui , react quizzes , auth0 for handling authentication
 
 Logic: 
 
-React quizzes for building the quiz questions and answers 
+- React quizzes for building the quiz questions and answers 
 
-adding some custom input fields such as : URL, Title, Description 
+- Adding some custom input fields such as : URL, Title, Description 
+
+- Answer quiz view functionality as required 
+
 
 
 Done : 
@@ -28,7 +31,7 @@ Done :
 - quizzes list view 
 
 
-to do: 
+To do: 
 
 - edit quiz view 
 - get quiz from local storage by id value; 
