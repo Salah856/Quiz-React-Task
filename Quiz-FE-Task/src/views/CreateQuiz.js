@@ -1,49 +1,68 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
-import {Quiz, QuizzBuilder} from 'react-quizzes';
+import { QuizzBuilder } from 'react-quizzes';
 import "react-quizzes/lib/assets/antd.css"
 
-import { Button } from '@material-ui/core';
+import { Button, TextField } from '@material-ui/core';
 
 const CreateQuiz = ({ className, ...rest }) => {
 
-  const [quizRef, setQuizRef] = useState(null);
-  const [quizzData, setQuizData] = useSate(null); 
+  const [quizData, setQuizData] = useState(null); 
+  
+  const [title, setTitle] = useState(''); 
+  const [description, setDescription] = useState(''); 
+  const [url, setURL] = useState(''); 
 
-  const saveQuizRef = (quizRef) => {
-    setQuizRef(quizRef); 
-  };
+  const handleTitleChange=(e)=>{
+    setTitle(e.target.value); 
+  }; 
+  
+  const handleDescriptionChange=(e)=>{
+    setDescription(e.target.value); 
+  }; 
+
+  const handleURLChange=(e)=>{
+    setURL(e.target.value); 
+  }; 
 
   const handleCustomSubmit = () => {    
-      
-    const form = quizRef.props.form;
-    form.validateFields((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-        form.resetFields(); 
-      }
-    });
+      console.log(quizData); 
   };
 
 
     return (
     <> 
-      {/* <Quiz
-        wrappedComponentRef={saveQuizRef}
-        submitButton={true}
-        data={[{
-          hello: 'salah'
-        }]}
-      /> */}
+    
+    <TextField 
+      label="Title" 
+      style={{margin: "20px"}} 
+      onChange={handleTitleChange}
+    />
+    <TextField 
+      label= "Description" 
+      style={{margin: '20px'}} 
+      onChange={handleDescriptionChange}
+    />
+    <TextField 
+      label="URL" 
+      style={{margin: '20px'}} 
+      onChange={handleURLChange}
+    />
+
       <QuizzBuilder 
         onChange={(QuizzData) => {
-          
-          console.log(QuizzData)
-        
+          console.log(QuizzData); 
+          setQuizData(QuizzData);         
         }}
       />
-      <Button onClick={handleCustomSubmit}>Create Quiz</Button>
+
+      <Button 
+        style={{backgroundColor: 'Blue', color: 'white'}}
+        onClick={handleCustomSubmit}
+      >
+        Create Quiz
+      </Button>
     </>
   );
 };
