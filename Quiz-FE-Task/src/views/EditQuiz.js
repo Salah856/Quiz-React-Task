@@ -65,7 +65,7 @@ const EditQuiz = () => {
                     color: 'white', 
                     backgroundColor: 'blue'
                 }}
-                //onClick={}
+                onClick={handleEditQuizSubmit}
             >
                 Edit Quiz
             </Button>
