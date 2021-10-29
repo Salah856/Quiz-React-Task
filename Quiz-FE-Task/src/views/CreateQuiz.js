@@ -2,7 +2,10 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
 import { QuizzBuilder } from 'react-quizzes';
-import "react-quizzes/lib/assets/antd.css"
+import "react-quizzes/lib/assets/antd.css"; 
+
+import createQuizJSON from '../utils/createQuizJSON';
+import handleLocalStorage from '../utils/handleStorage';
 
 import { Button, TextField } from '@material-ui/core';
 
@@ -27,7 +30,10 @@ const CreateQuiz = ({ className, ...rest }) => {
   }; 
 
   const handleQuizCreate = () => {    
-      console.log(quizData); 
+      // console.log(quizData); 
+
+      let quiz = createQuizJSON(quizData, URL, title, description); 
+      handleLocalStorage(quiz); 
   };
 
 
