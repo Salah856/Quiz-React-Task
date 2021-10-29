@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import {useParams} from 'react-router-dom'; 
 import getQuiz from '../utils/fetchQuizData';
-import { Button, TextField } from '@material-ui/core';
+import { Box, Button, TextField } from '@material-ui/core';
 
 const EditQuiz = () => {
 
@@ -57,15 +57,19 @@ const EditQuiz = () => {
             />
 
 
-        <Button
-            style={{
-                color: 'white', 
-                backgroundColor: 'blue'
-            }}
-            //onClick={}
+        <Box
+            mt={4}
         >
-            Edit Quiz
-        </Button>
+            <Button
+                style={{
+                    color: 'white', 
+                    backgroundColor: 'blue'
+                }}
+                //onClick={}
+            >
+                Edit Quiz
+            </Button>
+        </Box>
         </>
 
         // to do the ui of the every question and its options
