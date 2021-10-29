@@ -6,7 +6,8 @@ import {
  TableCell, TableContainer, 
  TableHead, Paper, TableRow,
  Button
-} from '@material-ui/core'
+} from '@material-ui/core'; 
+
 import getQuizzes from "../utils/getQuizzes";
 
 function Home(){
@@ -15,8 +16,9 @@ function Home(){
   const [quizzes, setQuizzes] = useState([]); 
   
   useEffect(() => { 
-    quizzes = getQuizzes();
-    setQuizzes(quizzes); 
+  
+    let fetchedQuizzes = getQuizzes();
+    setQuizzes(fetchedQuizzes); 
   }, [getQuizzes]);
 
   return (
