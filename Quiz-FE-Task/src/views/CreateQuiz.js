@@ -26,19 +26,19 @@ const CreateQuiz = ({ className, ...rest }) => {
     setURL(e.target.value); 
   }; 
 
-  const handleCustomSubmit = () => {    
+  const handleQuizCreate = () => {    
       console.log(quizData); 
   };
 
 
-    return (
-    <> 
-    
+  return (
+    <>  
     <TextField 
       label="Title" 
       style={{margin: "20px"}} 
       onChange={handleTitleChange}
     />
+
     <TextField 
       label= "Description" 
       style={{margin: '20px'}} 
@@ -59,7 +59,7 @@ const CreateQuiz = ({ className, ...rest }) => {
 
       <Button 
         style={{backgroundColor: 'Blue', color: 'white'}}
-        onClick={handleCustomSubmit}
+        onClick={handleQuizCreate}
       >
         Create Quiz
       </Button>

@@ -12,9 +12,10 @@ import "./app.css";
 const App = () => {
 
   window.title= "Quiz FE Task";
+
+  localStorage.setItem('quizzes', JSON.stringify([])); 
   
-  const { isLoading, logout } = useAuth0();
-       
+  const { isLoading } = useAuth0();
 
 
   if (isLoading) {
