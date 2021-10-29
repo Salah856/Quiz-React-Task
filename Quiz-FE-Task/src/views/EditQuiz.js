@@ -57,6 +57,19 @@ const EditQuiz = () => {
             />
 
 
+        {/* {
+            quiz.questions.map((question, index)=>{
+
+                return (
+                    <>
+                        if(question.elementType === 'RadioButton'){
+
+                        }
+                    </>
+                )
+            })
+        } */}
+        
         <Box
             mt={4}
         >

@@ -33,7 +33,6 @@ const CreateQuiz = ({ className, ...rest }) => {
   }; 
 
   const handleQuizCreate = () => {    
-      // console.log(quizData); 
 
       let quiz = createQuizJSON(quizData, URL, title, description); 
       handleLocalStorage(quiz);
