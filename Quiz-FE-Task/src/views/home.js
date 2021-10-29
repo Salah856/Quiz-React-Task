@@ -6,6 +6,7 @@ import {
  TableCell, TableContainer, 
  TableHead, Paper, TableRow,
 } from '@material-ui/core'
+import getQuizzes from "../utils/getQuizzes";
 
 function Home(){
 
@@ -13,7 +14,7 @@ function Home(){
   let quizzes = []; 
   
   useEffect(() => { 
-    quizzes = JSON.parse(localStorage.getItem('quizzes')); 
+    quizzes = getQuizzes(); 
   }, []);
 
   return (
