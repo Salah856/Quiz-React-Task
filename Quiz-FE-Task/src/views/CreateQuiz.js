@@ -1,31 +1,50 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import clsx from 'clsx';
 
-import * as Yup from 'yup';
-import { Formik } from 'formik';
+import {Quiz, QuizzBuilder} from 'react-quizzes';
+import "react-quizzes/lib/assets/antd.css"
 
-import {
-  Box, Button,
-  Card, CardContent,
-  CardHeader, Divider,
-  FormHelperText, Grid,
-  TextField, makeStyles
-} from '@material-ui/core';
-
-
-const useStyles = makeStyles(() => ({
-  root: {},
-}));
+import { Button } from '@material-ui/core';
 
 const CreateQuiz = ({ className, ...rest }) => {
-  
-    const classes = useStyles();
-    const history = useHistory();
+
+  const [quizRef, setQuizRef] = useState(null);
+  const [quizzData, setQuizData] = useSate(null); 
+
+  const saveQuizRef = (quizRef) => {
+    setQuizRef(quizRef); 
+  };
+
+  const handleCustomSubmit = () => {    
+      
+    const form = quizRef.props.form;
+    form.validateFields((err, values) => {
+      if (!err) {
+        console.log("Received values of form: ", values);
+        form.resetFields(); 
+      }
+    });
+  };
+
 
     return (
-    <div> initial create quiz </div>
+    <> 
+      {/* <Quiz
+        wrappedComponentRef={saveQuizRef}
+        submitButton={true}
+        data={[{
+          hello: 'salah'
+        }]}
+      /> */}
+      <QuizzBuilder 
+        onChange={(QuizzData) => {
+          
+          console.log(QuizzData)
+        
+        }}
+      />
+      <Button onClick={handleCustomSubmit}>Create Quiz</Button>
+    </>
   );
 };
 

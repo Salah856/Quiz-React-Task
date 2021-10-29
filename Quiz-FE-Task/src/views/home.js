@@ -42,11 +42,11 @@ function Home(){
       style={{marginBottom: '30px'}}
       onClick={
         ()=>{
-          history.push('/topics-create'); 
+          history.push('/quiz-create'); 
         }
       }
     >
-      Create Topic
+      Create Quiz
     </button>
     <MUIDataTable 
       title={"Topics"} 

@@ -5,7 +5,7 @@ const Footer = () => (
       
       <p>
       
-        Sample project provided by{" "}
+        Sample Quiz App Provided By{" "}
         
         <a target="_blank" 
           rel="noopener noreferrer" 
@@ -14,8 +14,6 @@ const Footer = () => (
           Salah Elhossiny 
         </a>
         {" "}
-
-        for Conduktor
     </p>
   </footer>
 );

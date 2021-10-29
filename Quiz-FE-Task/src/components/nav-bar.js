@@ -13,13 +13,7 @@ const NavBar = () => {
     <div className="nav-container mb-3">
       <nav className="navbar navbar-expand-md navbar-light bg-light">
         <div className="container">
-          <img 
-            //src="https://avatars.githubusercontent.com/u/60062294?s=200&v=4"
-            src="https://awsmp-logos.s3.amazonaws.com/cebc564a-ef52-4b68-8df9-9aad9d14ce34/e6e00d7e0978a73a48dae3010a553b1f.png"
-            width="350px"
-            height="80px"
-            style={{marginRight: "25px"}} 
-          />
+
           { user && user.picture && 
                     <img 
                       src={user.picture}
