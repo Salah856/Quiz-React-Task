@@ -30,6 +30,8 @@ Done :
 - created quiz questions 
 - quizzes list view 
 
+### N.B: 
+- in create quiz view: make sure you clicked on any of UI components such as : radio buttons, select, label, etc. 
 
 To do: 
 
