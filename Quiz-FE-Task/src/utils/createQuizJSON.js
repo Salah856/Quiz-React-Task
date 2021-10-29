@@ -7,9 +7,9 @@ const createQuizJSON = (quizData, URL, title, description) => {
     let answers = []; 
     
     quizData.forEach(item =>{
-        let {questions, options} = item; 
+        let {questions, options, element} = item; 
         
-        quests.push(questions.en); 
+        quests.push({questions:questions.en, elementType: element}); 
         answers.push(options);
     }); 
 
