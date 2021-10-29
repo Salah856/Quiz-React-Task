@@ -1,16 +1,17 @@
-
 import {useParams} from 'react-router-dom'; 
-import {Quiz} from 'react-quizzes'; 
+import getQuiz from '../utils/fetchQuizData';
 
 
-const EditQuiz=()=>{
+const EditQuiz = () => {
 
-    const {id} = useParams(); 
+    const { id } = useParams(); 
 
-    // to do get quiz from local storage by id value; 
+    let quiz = getQuiz(id); 
+    console.log(quiz); 
 
-    // then handle properly the format of data required for quiz component from react-quizzes packages; 
-
+    // to do :
+    // handle properly the format of data required 
+    // for quiz component from react-quizzes packages; 
 
 
     return (
