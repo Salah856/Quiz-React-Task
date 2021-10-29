@@ -1,4 +1,6 @@
 
+import generateUniqID from "./generateID";
+
 const createQuizJSON = ( quizData, URL, title, description) => {
    
     let quests = []; 
@@ -14,7 +16,7 @@ const createQuizJSON = ( quizData, URL, title, description) => {
 
     return {
 
-        id: '',
+        id: generateUniqID(),
         created: new Date().toLocaleString(),
         modified: '', 
         title,
