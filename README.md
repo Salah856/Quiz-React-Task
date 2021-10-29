@@ -21,3 +21,13 @@ React quizzes for building the quiz questions and answers
 
 adding some custom input fields such as : URL, Title, Description 
 
+
+Done : 
+
+- created quiz questions 
+- quizzes list view 
+
+
+to do: 
+
+- edit quiz 
